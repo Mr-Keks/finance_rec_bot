@@ -1,0 +1,2 @@
+class PaginationStates:
+    PAGINATION = 'pagination'
