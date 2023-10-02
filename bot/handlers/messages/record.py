@@ -1,8 +1,11 @@
 import json
+import os
 
 from aiogram import types, F, Router
 from typing import Any, Dict
 from aiogram.fsm.context import FSMContext
+
+from datetime import datetime
 
 from bot.keyboards.inline_keyboards.record_in_keyboards import create_category_keyboard
 from bot.keyboards.reply_keyboards.record_keyboards import skip_button_markup, save_record_button_markup, currency_buttons_markup, record_start_button_markup, main_menu
@@ -66,13 +69,31 @@ async def confirmation(message: types.Message, state: FSMContext):
     await saving(message=message, data=data)
 
 async def saving(message: types.Message, data: Dict[str, Any], state=FSMContext):
-    data_dump = json.dumps(data, indent=4)
     user = message.from_user.id
 
+    if data["currency"] == "Гривня":
+        data["currency"] = "uah"
+    elif data["currency"] == "Євро":
+        data["currency"] = "eu"
+        
+    file_name = datetime.today().date().__str__()
     try:
-        with open(f"data_dump_user_{user}", "w", encoding='utf-8') as file:
-            file.write(data_dump)
+        if not os.path.exists(f"{file_name}.json"):
+            with open(f"{file_name}.json", "w", encoding='utf-8') as json_file:
+                base_structure = {
+                    file_name: []
+                }
+                json.dump(base_structure, json_file, indent=4)
+
+        with open(f"{file_name}.json", "r", encoding='utf-8') as file:
+            existing_data = json.load(file)
+
+        with open(f"{file_name}.json", "w", encoding='utf-8') as file:
+            existing_data[file_name].append(data)
+            json.dump(existing_data, file, indent=4)
+            
         
         await message.answer("Дані збережено", reply_markup=main_menu)
-    except:
+    except Exception as ex:
         await message.answer("Сталася якась помилка :/")
+        print(ex)

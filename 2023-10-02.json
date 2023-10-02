@@ -1,0 +1,22 @@
+{
+    "2023-10-02": [
+        {
+            "category": "1",
+            "add_desc": "",
+            "cost": "9",
+            "currency": "\u0413\u0440\u0438\u0432\u043d\u044f"
+        },
+        {
+            "category": "2",
+            "add_desc": "htl",
+            "cost": "77",
+            "currency": "\u0404\u0432\u0440\u043e"
+        },
+        {
+            "category": "2",
+            "add_desc": "",
+            "cost": "23",
+            "currency": "eu"
+        }
+    ]
+}
