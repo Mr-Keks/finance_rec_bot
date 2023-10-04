@@ -8,5 +8,5 @@ start = Router()
 
 @start.message(CommandStart())
 async def start_bot(message: types.Message, state: FSMContext):
-    await message.answer("Початок роботи бота...")
-    await message.answer("Для початку роботи настисність 'Запис'", reply_markup=record_start_button_markup)
+    await message.answer("Starting bot...")
+    await message.answer("To start press 'Make a record'", reply_markup=record_start_button_markup)

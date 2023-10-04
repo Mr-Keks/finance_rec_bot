@@ -1,10 +1,10 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 # general buttons
-record_start_button = KeyboardButton(text="Запис")
-skip_button = KeyboardButton(text="Пропустити")
-edit_button = KeyboardButton(text="Редагувати")
-save_record_button = KeyboardButton(text="Зберегти")
+record_start_button = KeyboardButton(text="Make a record")
+skip_button = KeyboardButton(text="Skip")
+edit_button = KeyboardButton(text="Edit")
+save_record_button = KeyboardButton(text="Save")
 
 record_start_button_markup = ReplyKeyboardMarkup(
     keyboard=[
@@ -50,7 +50,7 @@ save_record_button_markup = ReplyKeyboardMarkup(
 main_menu = ReplyKeyboardMarkup(
     keyboard = [
         [
-            KeyboardButton(text="Головне меню")
+            KeyboardButton(text="Main menu")
         ]
     ],
     resize_keyboard=True,
@@ -58,8 +58,8 @@ main_menu = ReplyKeyboardMarkup(
 )
 
 # currency buttons
-uah_button = KeyboardButton(text="Гривня")
-eu_button = KeyboardButton(text="Євро")
+uah_button = KeyboardButton(text="UAH")
+eu_button = KeyboardButton(text="EURO")
 
 currency_buttons_markup = ReplyKeyboardMarkup(
     keyboard=[

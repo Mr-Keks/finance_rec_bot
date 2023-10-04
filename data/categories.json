@@ -1,6 +1,15 @@
 {
     "categories": {
-        "category 1": "1",
-        "category 2": "2"
+        "category 1": "food",
+        "category 2": "drinks",
+        "category 3": "traveling",
+        "category 4": "games",
+        "category 5": "books",
+        "category 6": "subscriptions",
+        "category 7": "rent",
+        "category 8": "internet",
+        "category 9": "hang out",
+        "category 10": "anime ^-^",
+        "category 11": "donates"
     }
 }

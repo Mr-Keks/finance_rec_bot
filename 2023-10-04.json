@@ -1,0 +1,36 @@
+{
+    "2023-10-04": [
+        {
+            "category_list": "",
+            "category_page_number": 1,
+            "category": "3",
+            "add_desc": "",
+            "cost": "123",
+            "currency": "eu"
+        },
+        {
+            "category_list": "",
+            "category_page_number": 2,
+            "category": "9",
+            "add_desc": "",
+            "cost": "123213213",
+            "currency": "uah"
+        },
+        {
+            "category_list": "",
+            "category_page_number": 1,
+            "category": "books",
+            "add_desc": "",
+            "cost": "54",
+            "currency": "uah"
+        },
+        {
+            "category_list": "",
+            "category_page_number": 2,
+            "category": "anime ^-^",
+            "add_desc": "one piece",
+            "cost": "999",
+            "currency": "eu"
+        }
+    ]
+}

@@ -17,6 +17,12 @@
             "add_desc": "",
             "cost": "23",
             "currency": "eu"
+        },
+        {
+            "category": "9",
+            "add_desc": "",
+            "cost": "0",
+            "currency": "uah"
         }
     ]
 }
